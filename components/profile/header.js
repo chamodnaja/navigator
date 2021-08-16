@@ -9,7 +9,10 @@ export default function Header({}) {
             <Image style={styles.profile} source={require('../../assets/images/profile.jpeg')}/>
             <Text style={styles.fullName}>Rosa  Erickson</Text>
             <View style={styles.buttonBox}>
-                <TouchableOpacity onPress={()=>navigation.navigate("FreindScreen")} style={[styles.button, {backgroundColor: '#EFF2F5',}]}>
+                <TouchableOpacity 
+                    onPress={()=>navigation.navigate("FreindScreen",{ titleText: 'Wellcome', myName: 'Chanat Chumchan' })} 
+                    style={[styles.button, {backgroundColor: '#EFF2F5',}]}
+                >
                     <Text style={[styles.textButton, {color: '#000'}]}>เพื่อน</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={[styles.button, {backgroundColor: '#429db5',}]}>

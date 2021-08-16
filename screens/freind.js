@@ -2,14 +2,16 @@ import React from 'react';
 import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import Friend from '../components/profile/friend';
 
-export default function Profile() {
-  return (
-      <ScrollView>
-        <View style={styles.container}>
-            <Friend/>
-        </View>
-      </ScrollView>
-  );
+export default function Profile({route}) {
+    const { titleText, myName } = route.params
+    return (
+        <ScrollView>
+            <View style={styles.container}>
+                <Text>{titleText} {myName}</Text>
+                <Friend/>
+            </View>
+        </ScrollView>
+    );
 }
 
 const styles = StyleSheet.create({
